@@ -1,0 +1,55 @@
+html{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  background-color: #45badd;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: url(./robot.gif);
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+button{
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: aliceblue;
+  background-color: #272727;
+  font-size: 20px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover{
+  filter: brightness(80%);
+}
+button:active{
+  transform: scale(95%);
+}
+button:disabled{
+  cursor: default;
+  filter: brightness(30%);
+}
+
+/* Media quary for tablet and smaller */
+
+@media screen and (max-width: 1000px){
+  .container{
+    background-size: cover;
+    background-position: center center;
+  }
+  button{
+    box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+}
